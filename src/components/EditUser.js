@@ -1,62 +1,3 @@
-/* import UserService from "../services/UserService";
-
-import { useParams,useHistory } from 'react-router-dom';
-import { UserForm } from "./UserForm";
-import { useState, useEffect} from 'react';
-
-
-export const EditUser = ({match}) =>{
-    const [user, setUser]  =useState(null);
-    const [loading, setLoading] = useState(false);
-    const { userId } = match.params;
-
-    useEffect(() => {
-        (async () => {
-            try{
-                const { data } = await UserService.getUserById(userId);
-                setUser(data);
-                setLoading(true);
-                console.log("Usuario > ",data);
-
-                }
-                catch ( err){
-                console.log('Error > ', err);
-                }
-            }
-        )()
-    }, [])
-    const history = useHistory();
-    console.log('History >', history);
-    const handleSubmit = (user) =>{
-        console.log("Usuario Id: ", userId);
-        UserService.updateUser({...user, id:userId})
-        .then(response =>{
-            history.replace('/');
-        })
-    };
-    const goBack  = () =>{
-        history.goBack();
-    }
-
-    return(
-		<div>
-			<h2>Editar Usuario</h2>
-           
-			<div>
-				<div>
-                {loading ? (<UserForm 
-                    onSubmit= { handleSubmit }
-                    onCancel = {goBack}
-                    user = {user}
-                    />):<div>Cargando...</div>
-                }
-				</div>
-            </div>
-            
-		</div>
-    )
-
-} */
 import React, { Component } from 'react';
 import UserService from "../services/UserService";
 import { UserForm } from "./UserForm";
@@ -64,7 +5,7 @@ import { connect } from 'react-redux';
 import { MESSAGE } from '../actions/alertAction';
 
 class  EditUser extends Component {
-
+    
     constructor(props){
         super(props)
         console.log('userId > ', props.match.params);
@@ -76,7 +17,6 @@ class  EditUser extends Component {
             userId : userId
         }
     }
-
     componentDidMount(){
         (async () => {
             try{
@@ -93,17 +33,12 @@ class  EditUser extends Component {
             }
         )()
     }
-
-/*     const history = useHistory();
-    console.log('History >', history); */
-
      handleSubmit = (user) =>{
         console.log("Usuario Id: ", this.state.userId);
         UserService.updateUser({...user, id: this.state.userId})
         .then(response =>{
             this.props.message({status:'SUCCESS',message:'Se ha actualizado con exito!!',show:true});
             this.props.history.replace('/users');
-            // history.replace('/');
         })
         .catch(error => {
             console.log(error)
@@ -113,7 +48,6 @@ class  EditUser extends Component {
     };
 
      goBack  = () =>{
-        //this.props.history.goBack();
         this.props.history.push('/users');
     }
     render(){
@@ -128,7 +62,6 @@ class  EditUser extends Component {
     )
 }
 }
-
 const mapDispatchProps = dispatch => ({
     message(alert){
         dispatch({
@@ -141,6 +74,5 @@ const mapDispatchProps = dispatch => ({
 const mapStateToProps = state =>({
 
 })
-
 
 export default connect(null, mapDispatchProps)(EditUser);

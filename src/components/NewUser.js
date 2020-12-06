@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { useHistory } from 'react-router-dom';
 import UserService from '../services/UserService';
 import { UserForm } from './UserForm';
 import { MESSAGE } from '../actions/alertAction';
@@ -9,8 +8,6 @@ class NewUser extends Component {
     constructor(){
         super()
     }
- // history = useHistory();
-
  handleSubmit = (user) =>{
 
     UserService.createUser(user)
@@ -26,7 +23,6 @@ class NewUser extends Component {
     });
 };
  goBack = () =>{
-    //this.props.history.goBack();
     this.props.history.push('/users');
 }
 render(){
@@ -48,10 +44,4 @@ const mapDispatchProps = dispatch => ({
         });
 }
 })
-
-const mapStateToProps = state =>({
-
-})
-
-
 export default connect(null, mapDispatchProps)(NewUser);

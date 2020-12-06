@@ -61,8 +61,8 @@ const {
                         clsx(
                             'input',
                             {
-                                'is-danger':errors.firstName && touched.firstName,
-                                'is-success':!errors.firstName && touched.firstName
+                                'input--error':errors.firstName && touched.firstName,
+                                'input--success':!errors.firstName && touched.firstName
                             }
                         )}
                         type="text"
@@ -74,7 +74,7 @@ const {
                         />
                 </div>
                 {errors.firstName && touched.firstName ? (
-                    <p class="help is-danger">
+                    <p class="text-error">
                         {errors.firstName}
                     </p>
                 ) : null}
@@ -85,8 +85,8 @@ const {
                         clsx(
                             'input',
                             {
-                                'is-danger':errors.lastName && touched.lastName,
-                                'is-success':!errors.lastName && touched.lastName
+                                'input--error':errors.lastName && touched.lastName,
+                                'input--success':!errors.lastName && touched.lastName
                             }
                         )}
                         type="text"
@@ -98,7 +98,7 @@ const {
                         />
                 </div>
                 {errors.lastName && touched.lastName ? (
-                    <p class="help is-danger">
+                    <p class="text-error">
                         {errors.lastName}
                     </p>
                 ) : null}
@@ -109,8 +109,8 @@ const {
                         clsx(
                             'input',
                             {
-                                'is-danger':errors.email && touched.email,
-                                'is-success':!errors.email && touched.email
+                                'input--error':errors.email && touched.email,
+                                'input--success':!errors.email && touched.email
                             }
                         )}
                         type="text"
@@ -122,7 +122,7 @@ const {
                         />
                 </div>
                 {errors.email && touched.email ? (
-                    <p class="help is-danger">
+                    <p class="text-error">
                         {errors.email}
                     </p>
                 ) : null}
@@ -133,8 +133,8 @@ const {
                         clsx(
                             'input',
                             {
-                                'is-danger':errors.role && touched.role,
-                                'is-success':!errors.role && touched.role
+                                'input--error':errors.role && touched.role,
+                                'input--success':!errors.role && touched.role
                             }
                         )}
                         type="text"
@@ -146,19 +146,19 @@ const {
                         />
                 </div>
                 {errors.role && touched.role ? (
-                    <p class="help is-danger">
+                    <p class="text-error">
                         {errors.role}
                     </p>
                 ) : null}
                 <div className="container-input group-button">
 					<div>
-						<button className="button info"
+						<button className="button btn-info"
 							disabled={!formik.isValid}>
 							{btnValue}
 						</button>
 					</div>
 					<div>
-                        <button className="button danger" type="button" onClick={onCancel}>
+                        <button className="button btn-danger" type="button" onClick={onCancel}>
 							Cancel
 						</button>
 					</div>

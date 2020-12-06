@@ -75,7 +75,7 @@
 .title-form{
     text-align:center;
 }
-.form .input {
+.input {
     width: 100%;
     padding: 15px;
     border-radius: 10px;
@@ -95,16 +95,16 @@
 display:flex;
 }
 
-.is-danger{
+.input--error{
     border:1px solid red;
 }
 
-.is-success{
+.input--success{
     border:1px solid green;
 }
 
-.help{
-    
+.text-error{
+    color:red;
 }
 
 
@@ -117,23 +117,27 @@ display:flex;
     outline:none;
 }
 
-.info{
+.btn-info{
     background: #355aad;
 }
 
-.danger{
-    background:red;
-    
-    
+.btn-danger{
+    background:red;   
 }
 
-.container-create-user  .info{
+.button[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+
+.container-create-user  .btn-info{
     margin-top:20px;
     display:inline-block;
 }
 
 
-.group-button .info{
+.group-button .btn-info{
     margin-right:20px;
 }
 

@@ -42,7 +42,7 @@ class Users extends Component {
             <div>
             <div className="container-create-user">            
             <h2>List users</h2>
-            <Link className="button info" to="/users/new">
+            <Link className="button btn-info" to="/users/new">
                 Create User
             </Link>
             </div>
@@ -83,10 +83,6 @@ const mapDispatchProps = dispatch => ({
             payload: alert
         });
 }
-})
-
-const mapStateToProps = state =>({
-
 })
 
 export default connect(null, mapDispatchProps)(Users);
