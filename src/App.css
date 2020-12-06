@@ -1,0 +1,169 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+
+
+.container{
+    max-width:1150px;
+    width:90%;   
+    margin: 0 auto;
+    display:flex; 
+    justify-content:center;
+    margin-top:50px;
+}
+
+
+
+
+
+.table-user{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.table-user thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: center;
+}
+
+.table-user th,
+.table-user td {
+    padding: 12px 15px;
+}
+
+.table-user tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.table-usertbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.table-user tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+.table-user tbody tr.active-row {
+    font-weight: bold;
+    color: #009879;
+}
+
+
+
+
+
+
+.container-form-user {
+    width: 600px;
+    padding: 30px;
+    box-shadow: 3px 4px 11px 0px #929292;
+    border-radius: 10px;
+}
+
+.input{
+
+}
+
+.title-form{
+    text-align:center;
+}
+.form .input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid gray;
+}
+.label-user-form{
+    margin: 0 0 10px 5px;
+    display:inline-block;
+}
+
+.container-input{
+    margin-top:15px;
+}
+
+.group-button{
+display:flex;
+}
+
+.is-danger{
+    border:1px solid red;
+}
+
+.is-success{
+    border:1px solid green;
+}
+
+.help{
+    
+}
+
+
+.button{
+    color: white;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    border:none;
+    outline:none;
+}
+
+.info{
+    background: #355aad;
+}
+
+.danger{
+    background:red;
+    
+    
+}
+
+.container-create-user  .info{
+    margin-top:20px;
+    display:inline-block;
+}
+
+
+.group-button .info{
+    margin-right:20px;
+}
+
+.modal {
+    width:350px;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 20px;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.status-success{
+    background-color: hsl(128, 75%, 53%,.7);
+}
+
+.status-error{
+    background-color: hsl( 0, 80%, 58%,.7);
+}
+
+
+.show{
+    opacity: 1;
+    transition: all .5s;
+}
+
+.hidden{
+    opacity: 0;
+    transition: all .5s;
+}
