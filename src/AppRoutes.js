@@ -14,7 +14,6 @@ import Header from  './layouts/Header';
                         <Route path="/users" exact component={ Users } />
                         <Route path="/users/edit/:userId" component={ EditUser } />
                         <Route path="/users/new" component={ NewUser } />
-                        <Route path="/header" component={ Header } />
                         </Switch>
                     </Router>
             )
