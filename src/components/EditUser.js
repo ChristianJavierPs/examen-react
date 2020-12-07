@@ -56,7 +56,7 @@ class  EditUser extends Component {
                     onSubmit= { this.handleSubmit }
                     onCancel = { this.goBack }
                     user = {this.state.user}
-                    title = "Edit user"
+                    title = "Editar usuario"
                     btnValue = "Editar"
                     />):<div>Cargando...</div>
     )

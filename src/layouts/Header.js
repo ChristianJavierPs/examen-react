@@ -13,8 +13,6 @@ const Header = ({alert,hiddenMessage}) => {
     return(
 <>
 <header>
-
-</header>
 <div
 className={clsx('modal', {
     'show':alert.show,
@@ -26,7 +24,9 @@ className={clsx('modal', {
     })
     }>
         {alert.message}
-</div>
+</div>   
+</header>
+
 
 </>
     );

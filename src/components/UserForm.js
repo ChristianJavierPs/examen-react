@@ -47,12 +47,12 @@ const {
             <h2 class="title-form">
                 {title}
             </h2>
-            <pre>
+{/*             <pre>
                 Error: {JSON.stringify(formik.errors.name)}
             </pre>
             <pre>
                 Touched: {JSON.stringify(formik.touched.name)}
-            </pre>
+            </pre> */}
             <form onSubmit={handleSubmit} class="form">
                 <div className="container-input">
                     <label class="label-user-form">First Name</label>
@@ -159,7 +159,7 @@ const {
 					</div>
 					<div>
                         <button className="button btn-danger" type="button" onClick={onCancel}>
-							Cancel
+							Cancelar
 						</button>
 					</div>
 				</div>

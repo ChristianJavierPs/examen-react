@@ -39,11 +39,11 @@ class Users extends Component {
 	};
     render(){
         return(
-            <div>
+            <div className="container-table-user">
             <div className="container-create-user">            
-            <h2>List users</h2>
+            <h2>Lista de usuarios</h2>
             <Link className="button btn-info" to="/users/new">
-                Create User
+                Crear usuario
             </Link>
             </div>
         <table class="table-user">
@@ -54,8 +54,8 @@ class Users extends Component {
                     <th>Last name</th>
                     <th>Email</th>
                     <th>Role</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Editar</th>
+                    <th>Eliminar</th>
                 </tr>
             </thead>
             <tbody>

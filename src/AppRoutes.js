@@ -6,7 +6,6 @@ import { BrowserRouter as Router,
 import  Users  from './components/Users';
 import EditUser  from './components/EditUser';
 import  NewUser  from './components/NewUser';
-import Header from  './layouts/Header';
         const AppRoutes = () => {
             return (
                     <Router>

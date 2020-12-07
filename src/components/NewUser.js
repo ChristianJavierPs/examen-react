@@ -30,7 +30,7 @@ render(){
             <UserForm 
             onSubmit= { this.handleSubmit }
             onCancel = {this.goBack}
-            title = "Create new user"
+            title = "Crear nuevo usuario"
             btnValue = "Crear"
             />
     )

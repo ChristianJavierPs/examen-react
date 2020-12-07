@@ -19,10 +19,10 @@ return(
         <td>{user.email}</td>
         <td>{user.role}</td>
         <td>
-            <Link className="button btn-info" to={`/users/edit/${user.id}`}>Edit</Link>
+            <Link className="button btn-info" to={`/users/edit/${user.id}`}>Editar</Link>
         </td>
         <td>
-            <button className="button btn-danger" onClick={handleClick}>Delete</button>
+            <button className="button btn-danger" onClick={handleClick}>Eliminar</button>
         </td>
     </tr>
 )

@@ -5,6 +5,9 @@
 }
 
 
+body{
+    background-color:#efefef;
+}
 
 
 .container{
@@ -17,7 +20,12 @@
 }
 
 
-
+.container-table-user{
+    background: white;
+    padding: 20px;
+    box-shadow: 3px 4px 11px 0px #929292;
+    border-radius: 10px;
+}
 
 
 .table-user{
@@ -26,10 +34,12 @@
     font-size: 0.9em;
     font-family: sans-serif;
     min-width: 400px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+    background-color: white;
+    border: 1px solid #d0d0d0;
 }
 .table-user thead tr {
-    background-color: #009879;
+    background-color: #ababab;
     color: #ffffff;
     text-align: center;
 }
@@ -43,12 +53,12 @@
     border-bottom: 1px solid #dddddd;
 }
 
-.table-usertbody tr:nth-of-type(even) {
+.table-user tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
 
 .table-user tbody tr:last-of-type {
-    border-bottom: 2px solid #009879;
+    border-bottom: 2px solid #ababab;
 }
 
 .table-user tbody tr.active-row {
@@ -66,6 +76,7 @@
     padding: 30px;
     box-shadow: 3px 4px 11px 0px #929292;
     border-radius: 10px;
+    background-color:white;
 }
 
 .input{
@@ -112,9 +123,10 @@ display:flex;
     color: white;
     text-decoration: none;
     padding: 8px 20px;
-    border-radius: 20px;
+    border-radius: 10px;
     border:none;
     outline:none;
+    cursor: pointer
 }
 
 .btn-info{
@@ -122,7 +134,7 @@ display:flex;
 }
 
 .btn-danger{
-    background:red;   
+    background:#ff3030;   
 }
 
 .button[disabled]{
